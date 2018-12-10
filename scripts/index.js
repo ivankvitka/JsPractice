@@ -8,6 +8,10 @@ var ourGroupStudents = ["Anton", "Sergey", "Ivan", "Vlad", "Yulia", "Dmitry", "Y
 //task3
 var question = prompt("Скільки у вас є грошей", "");
 
+while (question == "" || question < 0) {
+  question = prompt("Введіть, будь-ласка, суму грошей");
+}
+
 if (question >= 100) {
   var bigMac = confirm("Ви можете купити БігМакМеню. Бажаєте?");
 } else if (question >= 50 && question < 100) {
@@ -49,8 +53,8 @@ if (bigMac) {
 function validTime(question) {
   var time = prompt(question);
 
-  while (time < 0 || time > 23) {
-    time = prompt("Введіть час від 0 до 23 годин");
+  while (time == "" || time < 0 || time > 23) {
+    time = prompt(question + " від 0 до 23 годин");
   }
 
   return time;
@@ -64,11 +68,11 @@ var isDiscount = "Знижка 100%";
 var isntDiscount = "Вибачте знижка зараз не діє, приходьте з " + discountStart + " до " + discountEnd;
 
 if (discountStart < discountEnd && presentTime >= discountStart && presentTime <= discountEnd) {
-  console.log (isDiscount);
+  console.log(isDiscount);
 } else if (discountStart > discountEnd && (presentTime >= discountEnd || presentTime <= discountStart)) {
-  console.log (isDiscount);
+  console.log(isDiscount);
 } else {
-  console.log (isntDiscount);
+  console.log(isntDiscount);
 }
 
 //task 8
