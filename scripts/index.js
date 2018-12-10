@@ -8,7 +8,7 @@ var ourGroupStudents = ["Anton", "Sergey", "Ivan", "Vlad", "Yulia", "Dmitry", "Y
 //task3
 var question = prompt("Скільки у вас є грошей", "");
 
-while (question == "" || question < 0) {
+while (question === "" || question < 0) {
   question = prompt("Введіть, будь-ласка, суму грошей");
 }
 
@@ -53,7 +53,7 @@ if (bigMac) {
 function validTime(question) {
   var time = prompt(question);
 
-  while (time == "" || time < 0 || time > 23) {
+  while (time === "" || time < 0 || time > 23) {
     time = prompt(question + " від 0 до 23 годин");
   }
 
