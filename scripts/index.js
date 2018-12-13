@@ -18,7 +18,7 @@ if (question >= 100) {
   var chisburgerAndPotato = confirm("Ви можете купити Чізбургер і картоплю. Бажаєте?");
 } else if (question >= 20) {
   var cola = confirm("Ви можете купити колу. Бажаєте?");
-} else{
+} else {
   alert("Пробачте, в нашому закладі немає страв для вас :(")
 }
 
@@ -51,10 +51,10 @@ if (bigMac) {
 
 //task 7
 function validTime(question) {
-  var time = prompt(question);
+  var time = +prompt(question);
 
   while (time === "" || time < 0 || time > 23) {
-    time = prompt(question + " від 0 до 23 годин");
+    time = +prompt(question + " від 0 до 23 годин");
   }
 
   return time;
@@ -69,7 +69,7 @@ var isntDiscount = "Вибачте знижка зараз не діє, прих
 
 if (discountStart < discountEnd && presentTime >= discountStart && presentTime <= discountEnd) {
   console.log(isDiscount);
-} else if (discountStart > discountEnd && (presentTime >= discountStart || presentTime <= discountEnd)){
+} else if (discountStart > discountEnd && (presentTime >= discountStart || presentTime <= discountEnd)) {
   console.log(isDiscount);
 } else {
   console.log(isntDiscount);
