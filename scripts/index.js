@@ -14,11 +14,11 @@ while (question === "" || question < 0) {
 
 if (question >= 100) {
   var bigMac = confirm("Ви можете купити БігМакМеню. Бажаєте?");
-} else if (question >= 50 && question < 100) {
+} else if (question >= 50) {
   var chisburgerAndPotato = confirm("Ви можете купити Чізбургер і картоплю. Бажаєте?");
-} else if (question >= 20 && question < 50) {
+} else if (question >= 20) {
   var cola = confirm("Ви можете купити колу. Бажаєте?");
-} else if (question < 20) {
+} else{
   alert("Пробачте, в нашому закладі немає страв для вас :(")
 }
 
@@ -69,7 +69,7 @@ var isntDiscount = "Вибачте знижка зараз не діє, прих
 
 if (discountStart < discountEnd && presentTime >= discountStart && presentTime <= discountEnd) {
   console.log(isDiscount);
-} else if (discountStart > discountEnd && (presentTime >= discountEnd || presentTime <= discountStart)) {
+} else if (discountStart > discountEnd && (presentTime >= discountStart || presentTime <= discountEnd)){
   console.log(isDiscount);
 } else {
   console.log(isntDiscount);
@@ -83,13 +83,13 @@ var mashaSatisfied = "Маша була рада";
 var mashaDissapointed = "Маша була засмучена";
 
 if (isStepanCome && isNikoCome && !isAnjelaCome) {
-  alert(mashaSatisfied);
+  console.log(mashaSatisfied);
 } else if ((isStepanCome && !isNikoCome && isAnjelaCome) || (!isStepanCome && isNikoCome && isAnjelaCome)) {
-  alert(mashaSatisfied);
+  console.log(mashaSatisfied);
 } else if (isAnjelaCome && !isNikoCome && !isStepanCome) {
-  alert(mashaSatisfied);
+  console.log(mashaSatisfied);
 } else {
-  alert(mashaDissapointed);
+  console.log(mashaDissapointed);
 }
 
 
